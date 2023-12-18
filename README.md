@@ -1,6 +1,6 @@
 # KioskVideoCallButtons
 
-## Download and install TrueConf VideoSDK or TrueConf Room
+## Download and install TrueConf VideoSDK
 
    1. [Download TrueConf VideoSDK](https://github.com/TrueConf/pyVideoSDK/blob/main/download.md)
    1. Install with default settigs (Port = 8080)
