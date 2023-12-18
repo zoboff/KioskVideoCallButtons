@@ -1,5 +1,9 @@
 # KioskVideoCallButtons
 
+## System required
+
+   * Visual Studio 2022
+
 ## Download and install TrueConf VideoSDK
 
    1. [Download TrueConf VideoSDK](https://github.com/TrueConf/pyVideoSDK/blob/main/download.md)
