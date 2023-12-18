@@ -1,6 +1,5 @@
-using VideoSDK;
+using TrueConfVideoSDKLibrary;
 using System.Net.NetworkInformation;
-using static VideoSDK.VideoSDKEvents_V1;
 
 namespace ThreeVideoCallButtons
 {
@@ -15,11 +14,11 @@ namespace ThreeVideoCallButtons
         public static readonly string MY_PASSWORD = "***";
 
         // TrueConf IDs
-        public static readonly string UserID1 = "operator1";
-        public static readonly string UserID2 = "operator2";
-        public static readonly string UserID3 = "operator3";
+        public static readonly string TrueConfID1 = "operator1";
+        public static readonly string TrueConfID2 = "operator2";
+        public static readonly string TrueConfID3 = "operator3";
 
-        VideoSDK.VideoSDK sdk;
+        VideoSDK sdk;
 
         int CurrentAppState = -1;
 
@@ -27,7 +26,7 @@ namespace ThreeVideoCallButtons
         {
             InitializeComponent();
 
-            sdk = new VideoSDK.VideoSDK(true);
+            sdk = new VideoSDK(true);
         }
 
         private void VideoCall_Load(object sender, EventArgs e)
@@ -83,7 +82,7 @@ namespace ThreeVideoCallButtons
             if (CurrentAppState == AppStates.Conference.State || CurrentAppState == AppStates.Wait.State)
                 sdk.Methods.hangUp();
             else
-                sdk.Methods.call(UserID1);
+                sdk.Methods.call(TrueConfID1);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -91,7 +90,7 @@ namespace ThreeVideoCallButtons
             if (CurrentAppState == AppStates.Conference.State || CurrentAppState == AppStates.Wait.State)
                 sdk.Methods.hangUp();
             else
-                sdk.Methods.call(UserID2);
+                sdk.Methods.call(TrueConfID2);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -99,7 +98,7 @@ namespace ThreeVideoCallButtons
             if (CurrentAppState == AppStates.Conference.State || CurrentAppState == AppStates.Wait.State)
                 sdk.Methods.hangUp();
             else
-                sdk.Methods.call(UserID3);
+                sdk.Methods.call(TrueConfID3);
         }
 
         static void OnEvent(object source, string response)
